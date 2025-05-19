@@ -1,0 +1,90 @@
+\doxysection{functest.\+h}
+\hypertarget{functest_8h_source}{}\label{functest_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EDBD263F\_EDE2\_44A9\_BADA\_FF5F2E5385E2}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EDBD263F\_EDE2\_44A9\_BADA\_FF5F2E5385E2}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vertice}{Vertice}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{struct_vertice_ae9aae69725a37b059383c13ccd43a95e}{y}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_vertice_a5a1bed92739e4b23e57b497c710e48bf}{freq}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ visita;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vertice}{Vertice}}*\ prox;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}*\ \mbox{\hyperlink{struct_vertice_adfd222d509bc730865c903b897f745d9}{arestas}};\ \ \ \ }
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{struct_vertice}{Vertice}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ \mbox{\hyperlink{struct_aresta_a242596a0a3cbfc31f9841a64dd30ae49}{destino}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}*\ \mbox{\hyperlink{struct_aresta_a9a0dbe60945590437bb155b64632f411}{prox}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \}\ \mbox{\hyperlink{struct_aresta}{Aresta}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_grafo}{Grafo}}\{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ vertices;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_grafo_a7b5ec4ea90f8a14c4ac6dead5f6cfa45}{num\_vertices}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ topo;\ \ \textcolor{comment}{//\ auxiliar\ para\ ordem\ de\ visitadoos}}
+\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{struct_grafo}{Grafo}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_fila}{Fila}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ v;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_fila}{Fila}}*\ prox;}
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{struct_fila}{Fila}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ CriarGrafo();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ ProcurarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ ;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ AdicionarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{char}\ freq,\ \textcolor{keywordtype}{bool}*\ sucesso)\ ;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{bool}\ LibertarListaArestas(\mbox{\hyperlink{struct_aresta}{Aresta}}*\ a)\ ;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ RemoverAresta(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ xOrig,\ \textcolor{keywordtype}{int}\ yOrig,\ \textcolor{keywordtype}{int}\ xDest,\ \textcolor{keywordtype}{int}\ yDest,\ \textcolor{keywordtype}{bool}*\ sucesso)\ ;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ RemoverVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{bool}*\ sucesso)\ ;}
+\DoxyCodeLine{00050\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ AdicionarAresta(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ xOrig,\ \textcolor{keywordtype}{int}\ yOrig,\ \textcolor{keywordtype}{int}\ xDest,\ \textcolor{keywordtype}{int}\ yDest,\ \textcolor{keywordtype}{bool}*\ sucesso)\ ;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ DestruirGrafo(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{bool}*\ sucesso)\ ;}
+\DoxyCodeLine{00053\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ LerFicheiro(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nomeFicheiro,\ \textcolor{keywordtype}{bool}*\ sucesso);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{bool}\ guardarGrafo(\mbox{\hyperlink{struct_grafo}{Grafo}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00055\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ listarAntenas(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}*\ contador);}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{bool}\ deduzirNefasto(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ encontrarVerticePorID(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ ;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{bool}\ inserirAresta(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ origem,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ destino);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{bool}\ removerAresta(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ origem,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ destino);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{bool}\ ligarVerticesComMesmaFrequencia(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{char}*\ gerarMatrizGrafo(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{bool}\ limparVisitados(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g)\ ;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{bool}\ dfsRecursivo(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ v,\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ g)\ ;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{bool}\ dfs(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ ;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{bool}\ adicionarAFila(\mbox{\hyperlink{struct_fila}{Fila}}**\ f,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ v)\ ;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ removerDaFila(\mbox{\hyperlink{struct_fila}{Fila}}**\ f)\ ;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{bool}\ bfs(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ ;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{bool}\ mostrarcaminho(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ LerArestasBinario(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nomeFicheiro)\ ;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{bool}\ GuardarArestasBinario(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nomeFicheiro);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ EDBD263F\_EDE2\_44A9\_BADA\_FF5F2E5385E2\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
